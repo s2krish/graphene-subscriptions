@@ -62,8 +62,7 @@ class GraphqlSubscriptionConsumer(SyncConsumer):
                 operation_name=payload.get("operationName"),
                 variables=payload.get("variables"),
                 context=context,
-                root=stream,
-                allow_subscriptions=True,
+                root=stream
             )
 
             if hasattr(result, "subscribe"):
